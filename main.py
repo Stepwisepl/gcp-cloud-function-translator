@@ -15,7 +15,7 @@ def translateFile(file_data, context):
     bucket_name = file_data['bucket']
 
     if not file_name.endswith(FILE_SUFFIX_TO_TRANSLATE):
-        print(f'File not ending with "to_translate" [{file_name}], ignoring.')
+        print(f'File not ending with "{FILE_SUFFIX_TO_TRANSLATE}" suffix: [{file_name}], ignoring.')
         return
 
     bucket = storage_client.bucket(bucket_name)
